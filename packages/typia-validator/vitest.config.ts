@@ -1,8 +1,13 @@
-import { defineConfig, defaultExclude } from 'vitest/config'
+import UnpluginTypia from '@ryoppippi/unplugin-typia/vite'
+import { defineProject } from 'vitest/config'
 
-export default defineConfig({
+export default defineProject({
+  plugins: [
+    UnpluginTypia({
+      tsconfig: './tsconfig.json',
+    }),
+  ],
   test: {
     globals: true,
-    exclude: [...defaultExclude, 'test'],
   },
 })

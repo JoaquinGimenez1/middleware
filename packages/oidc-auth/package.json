@@ -1,6 +1,6 @@
 {
   "name": "@hono/oidc-auth",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "OpenID Connect Authentication middleware for Hono",
   "type": "module",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest --coverage",
+    "test": "vitest",
     "build": "tsup ./src/index.ts --format esm --dts",
     "prerelease": "yarn build && yarn test",
     "release": "yarn prerelease && yarn npm publish"
@@ -37,12 +37,11 @@
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.5",
-    "@vitest/coverage-v8": "^2.1.8",
     "hono": "^4.0.1",
     "jsonwebtoken": "^9.0.2",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3",
-    "vitest": "^2.1.8"
+    "vitest": "^3.0.8"
   },
   "dependencies": {
     "oauth4webapi": "^2.6.0"
